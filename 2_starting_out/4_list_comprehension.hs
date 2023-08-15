@@ -84,3 +84,12 @@ removeNonUppercase st = [ c | c <- st, c `elem` ['A'..'Z'] ]
 -- ghci> removeNonUppercase "IdontLIKEFROGS!"
 -- "ILIKEFROGS"
 
+-- The predicate here does all the work. It says that the character will be
+-- included in the new list only if it's an element of the list ['A'..'Z'].
+-- Nested list comprehensions are also possible if you're operating on lists
+-- that contain lists. A list contains several lists of numbers. Let's remove
+-- all odd numbers without flattening the list.
+xxs = [[1,3,5,2,3,1,2,4,5],[1,2,3,4,5,6,7,8,9],[1,2,4,2,1,6,3,1,3,2,3,6]]
+removeNestedOddNumbers = [ [ x | x <- xs, even x ] | xs <- xxs ]
+-- [[2,2,4],[2,4,6,8],[2,4,2,6,2,6]]
+
