@@ -34,15 +34,15 @@ listIndexFloat = [25.0,241.2,5.98,2.4] !! 2
 
 {-
     ghci> [3,2,1] > [2,1,0]  
-    True  
+    True
     ghci> [3,2,1] > [2,10,100]  
-    True  
+    True
     ghci> [3,4,2] > [3,4]  
-    True  
+    True
     ghci> [3,4,2] > [2,4]  
-    True  
+    True
     ghci> [3,4,2] == [3,4,2]  
-    True  
+    True
 -}
 
 -- Some useful functions
