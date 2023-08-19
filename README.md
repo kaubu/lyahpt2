@@ -75,72 +75,110 @@ True
 
 ##### Useful functions
 
+`head` takes a list and returns its head (the first element).
+
 ```haskell
--- `head` takes a list and returns its head (the first element)
 fHead = head [5,4,3,2,1]
 -- 5
+```
 
--- `tail` takes a list and returns its tail (all elements but the first)
+`tail` takes a list and returns its tail (all elements but the first).
+
+```haskell
 fTail = tail [5,4,3,2,1]
 -- [4,3,2,1]
+```
 
--- `last` takes a list and returns its last element
+`last` takes a list and returns its last element.
+
+```haskell
 fLast = last [5,4,3,2,1]
 -- 1
+```
 
--- `init` takes a list and returns everything except its last element
+`init` takes a list and returns everything except its last element.
+
+```haskell
 fInit = init [5,4,3,2,1]
 -- [5,4,3,2]
+```
 
--- `length` takes a list and returns its length
+`length` takes a list and returns its length.
+
+```haskell
 fLength = length [5,4,3,2,1]
 -- 5
+```
 
--- `null` checks if a list is empty
+`null` checks if a list is empty.
+
+```haskell
 fNull = null [1,2,3]
 -- False
 fNull' = null []
 -- True
+```
 
--- `reverse` reverses a list
+`reverse` reverses a list.
+
+```haskell
 fReverse = reverse [5,4,3,2,1]
 -- [1,2,3,4,5]
+```
 
--- `take` takes a number and a list
--- it extracts that many elements from the beginning of the list
-{-
-    ghci> take 3 [5,4,3,2,1]  
-    [5,4,3]  
-    ghci> take 1 [3,9,3]  
-    [3]  
-    ghci> take 5 [1,2]  
-    [1,2]  
-    ghci> take 0 [6,6,6]  
-    []  
--}
--- See how if we try to take more elements than there are in the list, it just
--- returns the list. If we try to take 0 elements, we get an empty list.
+`take` takes a number and a list. It extracts that many elements from the
+beginning of the list.
 
--- `maximum` takes a list of stuff that can be ordered and returns the biggest
--- element
+```sh
+ghci> take 3 [5,4,3,2,1]  
+[5,4,3]  
+ghci> take 1 [3,9,3]  
+[3]  
+ghci> take 5 [1,2]  
+[1,2]  
+ghci> take 0 [6,6,6]  
+[]
+```
+
+See how if we try to take more elements than there are in the list, it just
+returns the list. If we try to take 0 elements, we get an empty list.
+
+---
+
+`maximum` takes a list of stuff that can be ordered and returns the biggest
+element.
+
+```haskell
 fMaximum = maximum [5,4,3,2,1]
 -- 5
+```
 
--- `minimum` returns the smallest
+`minimum` returns the smallest.
+
+```haskell
 fMinimum = minimum [5,4,3,2,1]
 -- 1
+```
 
--- `sum` takes a list of numbers and returns their sum (adds them all)
+`sum` takes a list of numbers and returns their sum (adds them all).
+
+```haskell
 fSum = sum [5,4,3,2,1]
 -- 15
+```
 
--- `product` takes a list and returns their product (multiplies them all)
+`product` takes a list and returns their product (multiplies them all).
+
+```haskell
 fProduct = product [5,4,3,2,1]
 -- 120
+```
 
--- `elem` takes an item and a list and tells us if that item is an element of
--- the list. It's usually called as an infix function because it's easier to
--- read that way.
+`elem` takes an item and a list and tells us if that item is an element of the
+list. It's usually called as an infix function because it's easier to read that
+way.
+
+```haskell
 fElem = elem 4 [1,2,3,4]
 fElem' = 4 `elem` [1,2,3,4]
 -- True
